@@ -1,39 +1,25 @@
 public class Cuenta {
-    protected double saldo;
-    protected int numDepositos;
-    protected int numRetiros;
+    protected float saldo;
+    protected int numeroDepositos = 0;
+    protected int numeroRetiros = 0;
+    protected float tasaAnual;
 
-    public Cuenta() {
-        saldo = 0;
-        numDepositos = 0;
-        numRetiros = 0;
+    public Cuenta(float saldoInicial, float tasa) {
+        saldo = saldoInicial;
+        tasaAnual = tasa;
     }
 
-    public void depositar(double monto) {
-        if (monto > 0) {
-            saldo += monto;
-            numDepositos++;
+    public void depositar(float cantidad) {
+        if (cantidad > 0) {
+            saldo += cantidad;
+            numeroDepositos++;
         }
     }
 
-    public boolean retirar(double monto) {
-        if (monto > 0 && saldo >= monto) {
-            saldo -= monto;
-            numRetiros++;
-            return true;
+    public void retirar(float cantidad) {
+        if (cantidad > 0 && saldo >= cantidad) {
+            saldo -= cantidad;
+            numeroRetiros++;
         }
-        return false;
-    }
-
-    public double getSaldo() {
-        return saldo;
-    }
-
-    public int getNumDepositos() {
-        return numDepositos;
-    }
-
-    public int getNumRetiros() {
-        return numRetiros;
     }
 }
