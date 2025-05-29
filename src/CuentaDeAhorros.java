@@ -36,9 +36,9 @@ public class CuentaDeAhorros extends Cuenta {
         System.out.println("Número de retiros: " + numeroRetiros);
         System.out.println("Tasa anual: " + tasaAnual);
         if (activa) {
-            System.out.println("Cuenta activa: Sí");
+            System.out.println("Cuenta activa");
         } else {
-            System.out.println("Cuenta activa: No");
+            System.out.println("Cuenta inactiva");
         }
     }
 }
