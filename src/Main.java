@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        CuentaDeAhorros cuenta = new CuentaDeAhorros(200, 12f);
+        CuentaDeAhorros cuenta = new CuentaDeAhorros(200, 0.1f);
         Scanner sc = new Scanner(System.in);
         int opcion;
         float cantidad;
@@ -29,7 +29,7 @@ public class Main {
                     System.out.print("Cantidad a retirar: ");
                     cantidad = sc.nextFloat();
                     cuenta.retirar(cantidad);
-                    System.out.println("Retiro realizado (si la cuenta está activa y hay saldo suficiente).");
+                    System.out.println("Retiro realizado.");
                     break;
                 case 3:
                     System.out.println("Número de depósitos: " + cuenta.numeroDepositos);
@@ -38,10 +38,10 @@ public class Main {
                     System.out.println("Número de retiros: " + cuenta.numeroRetiros);
                     break;
                 case 5:
-                    System.out.println("Saldo actual: $" + cuenta.saldo);
+                    System.out.println("Saldo actual: " + cuenta.saldo);
                     break;
                 case 6:
-                    System.out.println("¡Hasta luego!");
+                    System.out.println("Saliste");
                     break;
                 default:
                     System.out.println("Opción inválida.");
